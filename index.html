@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <title>Magik Site | Home</title>
-  <link rel="icon" type="image/x-icon" href="Magik-Planet.png">
+  <title>Magik Site - Home</title>
+  <link rel="icon" type="image/x-icon" href="Images/Magik-Planet.png">
   <style>
     body {
       margin: 0;
@@ -72,20 +72,23 @@
     .Active {
       color: black;
       font-family: Georgia;
-      font-weight: bolder;
       text-decoration: none;
+      padding-right: 10px;
+      padding-left: 10px;
       font-size: 25px;
       float: right;
       text-shadow: 1px 1px grey;
       margin-top: -55px;
-      margin-right: 350px;
+      margin-right: 345px;
       transition: 0.5s;
     }
 
     .Non-Active1 {
-      color: black;
+      color: #0f0f0f;
       font-family: Georgia;
       text-decoration: none;
+      padding-right: 10px;
+      padding-left: 10px;
       font-size: 25px;
       float: right;
       margin-top: -55px;
@@ -95,9 +98,11 @@
     }
 
     .Non-Active2 {
-      color: black;
+      color: #0f0f0f;
       font-family: Georgia;
       text-decoration: none;
+      padding-right: 10px;
+      padding-left: 10px;
       text-shadow: 1px 1px grey;
       font-size: 25px;
       float: right;
@@ -133,14 +138,15 @@
       text-align: center;
       font-family: Georgia;
       font-size: 20px;
-      margin-top: -225px;
+      margin-top: -170px;
+      width: 750px;
     }
 
     .Ace-Hardware-Ad {
-      width: 50px;
-      height: 500px;
-      margin-left: 93%;
-      margin-top: -175px;
+      width: 75px;
+      height: 250px;
+      margin-left: 94.4%;
+      margin-top: -25px;
       border-right: 1px solid black;
     }
 
@@ -153,22 +159,28 @@
 
 <body>
   <div id="Header">
-    <a href="/Magik-Site/"><img class="Logo" src="Magik-Planet.png"></a>
-    <h1 class="Header-Title"><a href="/Magik-Site/">Magik Site</h1>
-    <a class="Active" href="/Magik-Site/">ㅤHomeㅤ</a>
-    <a class="Non-Active1" href="Information.html">ㅤInformation ㅤ</a>
-    <a class="Non-Active2" href="Ratings.html">ㅤRatingsㅤ</a>
+    <a href="index.html"><img class="Logo" src="Images/Magik-Planet.png"></a>
+    <h1 class="Header-Title"><a href="index.html">Magik Site</h1>
+    <a class="Active" href="index.html">Home</a>
+    <a class="Non-Active1" href="Information.html">Information</a>
+    <a class="Non-Active2" href="Ratings.html">Ratings</a>
   </div>
   <h1 class="Header-Body">Welcome to Magik Site!</h1>
   <br>
-  <a class="Ace-Hardware-Ad" href="https://acehardware.com" target="_blank"><img src="Ace-Hardware-Ad.png"></a>
-  <p class="Information">Hey you! Welcome to Magik Site! You can launch our very special unblocked game site here! Just
-    click below to launch!</p>
+  <a href="https://acehardware.com" target="_blank"><img 
+class="Ace-Hardware-Ad" src="Images/Ace-Hardware-Ad.png"></a>
+  <center><p class="Information">Hey you! Welcome to Magik Site! You can launch our very special unblocked game site here! Just
+    click below to launch!</p></center>
   <html>
 
   <body><br>
     <center><button class="c-button" onclick="myWindow1()">Open Now!</button></center>
-    <script> function myWindow1() {var myWindow1 = window.open('', 'myWindow1', 'scrollbars=1,height=' + screen.availHeight + ',width=' + screen.availWidth); myWindow1.document.write('<!DOCTYPE html>\n\ <title>Magik_X Games</title>\n\ <p> <iframe src="https://xtramagik.github.io/Launched/Home" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"> <script> alert(""); <script>');} </script>
+    <script> 
+      function myWindow1() {
+        var myWindow1 = window.open('', 'myWindow1', 'scrollbars=1,height=' + screen.availHeight + ',width=' + screen.availWidth);
+        myWindow1.document.write('<!DOCTYPE html><title>Magik_X Games</title><p><iframe src=\"https://testing-transitions.magikxplayz.repl.co\" frameborder=\"0\" style=\"overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px\" height=\"100%\" width=\"100%\"></iframe></p>')
+      }
+    </script>
     <style>
       .c-button {
         margin: 10px;
@@ -199,32 +211,35 @@
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <center><a href="#Header"><button class="Top">Back To Top</button></a></center>
   <style>
-      .Top {
-        margin: 10px;
-        min-width: 150px;
-        font-weight: bolder;
-        font-family: georgia;
-        appearance: none;
-        border: 1px solid navy;
-        border-radius: 5px;
-        background-color: white;
-        color: navy;
-        width: 200px;
-        height: 50px;
-        font-size: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+    .Top {
+      margin: 10px;
+      min-width: 150px;
+      font-weight: bolder;
+      font-family: georgia;
+      appearance: none;
+      border: 1px solid navy;
+      border-radius: 5px;
+      background-color: white;
+      color: navy;
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-      .Top:hover {
-        transition: 0.3s;
-        background: navy;
-        color: white
-      }
-    </style>
-  <center><a href="https://app.grammarly.com/apps" target="_blank"><img class="Grammarly" src="Grammarly-Ad.png"></a></center>
+    .Top:hover {
+      transition: 0.3s;
+      background: navy;
+      color: white
+    }
+  </style>
+  <center><a href="https://app.grammarly.com/apps" target="_blank"><img class="Grammarly"
+        src="Images/Grammarly-Ad.png"></a></center>
   <div class="Footer">
-    <center><img class="Footer-Logo" src="Magik-Planet.png"><h1 class="Footer-Title">Magik Site ©</h1></center>
+    <center><img class="Footer-Logo" src="Images/Magik-Planet.png">
+      <h1 class="Footer-Title">Magik Site ©</h1>
+    </center>
   </div>
 </body>
 
