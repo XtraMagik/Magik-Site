@@ -199,8 +199,8 @@
     <a href="index.html"><img class="Logo" src="Images/Magik-Planet.png"></a>
     <h1 class="Header-Title"><a href="index.html">Magik Site</h1>
     <a class="Active" href="index.html">Home</a>
-    <a class="Non-Active1" href="Information">Information</a>
-    <a class="Non-Active2" href="Ratings">Ratings</a>
+    <a class="Non-Active1" href="Information.html">Information</a>
+    <a class="Non-Active2" href="Ratings.html">Ratings</a>
   </div>
   <h1 class="Header-Body">Magik Site Feedback</h1>
   <br>
