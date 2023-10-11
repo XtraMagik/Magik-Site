@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Magik_X Games | SoundBoard</title>
+  <link rel="icon" type="image/x-icon" href="Images/Magik-Planet.png">
+  <style>
+    body {
+      background-color: black;
+      border: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #Stop-Button {
+      background-color: #474646;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .Echo-Fart-Button {
+      background-color: green;
+    }
+
+    .Quick-Fart-Button {
+      background-color: lime;
+    }
+
+    .Cartoon-Fart-Button {
+      background-color: saddlebrown;
+    }
+
+    .Dry-Fart-Button {
+      background-color: darkgreen;
+    }
+
+    .Mario-Fart-Button {
+      background-color: brown;
+    }
+
+    .Diarrhea-Button {
+      background-color: saddlebrown;
+    }
+
+    .Wet-Fart-Button {
+      background-color: darkgreen;
+    }
+
+    .Beans-Fart-Button {
+      background-color: saddlebrown;
+    }
+
+    .Oh-No-Fart-Button {
+      background-color: green;
+    }
+
+    .Brain-Fart-Button {
+      background-color: lime;
+    }
+
+    .Android-2015-Button {
+      background-color: darkcyan;
+    }
+
+    .Android-2017-Button {
+      background-color: cadetblue;
+    }
+
+    .Android-2019-Button {
+      background-color: cornflowerblue;
+    }
+    
+    .Android-2021-Button {
+      background-color: blue;
+    }
+
+    .Normal-Android-Button {
+      background-color: orangered;
+    }
+
+    .Loud-Android-Button {
+      background-color: red;
+    }
+
+    .Button {
+      border-radius: 100px;
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #2b2a2a;
+      color: white;
+      font-family: monospace;
+      font-size: 15px;
+      font-weight: bolder;
+      float: left;
+      transition: 0.3s;
+    }
+
+    .Button:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 0.1s;
+    }
+
+    .Button:active {
+      transform: scale(0.9);
+      opacity: 0.75;
+      transition: 0.1s;
+    }
+  </style>
+</head>
+
+<body>
+  <!--So, I can't put this in the Main Root folder for the Magik_X Games site because the sound files and image files get mixed up and all sorts of wierd stuff starts happening, so this is in the main Root folder right now until we can find a better way to keep this in a seperate folder.-->
+  <div>
+    <audio id="Echo" src="Sounds/Echo-Fart.mp3" preload="auto"></audio>
+    <button class="Button Echo-Fart-Button" onclick="document.getElementById('Echo').play();">Echo Fart</button>
+
+    <audio id="Fart" src="Sounds/Quick-Fart.mp3" preload="auto"></audio>
+    <button class="Button Quick-Fart-Button" onclick="document.getElementById('Fart').play();">Quick Fart</button>
+
+    <audio id="Fart-2" src="Sounds/Quick-Fart-2.mp3" preload="auto"></audio>
+    <button class="Button Quick-Fart-Button" onclick="document.getElementById('Fart-2').play();">Quick Fart 2</button>
+
+    <audio id="Cartoon-Fart" src="Sounds/Cartoon-Fart.mp3" preload="auto"></audio>
+    <button class="Button Cartoon-Fart-Button" onclick="document.getElementById('Cartoon-Fart').play();">Cartoon
+      Fart</button>
+
+    <audio id="Dry-Fart" src="Sounds/Dry-Fart.mp3" preload="auto"></audio>
+    <button class="Button Dry-Fart-Button" onclick="document.getElementById('Dry-Fart').play();">Dry Fart</button>
+
+    <audio id="Mario-Fart" src="Sounds/Mario-Fart.mp3" preload="auto"></audio>
+    <button class="Button Mario-Fart-Button" onclick="document.getElementById('Mario-Fart').play();">Mario Fart</button>
+
+    <audio id="Diarrhea" src="Sounds/Diarrhea.mp3" preload="auto"></audio>
+    <button class="Button Diarrhea-Button" onclick="document.getElementById('Diarrhea').play();">Explosive Diarrhea</button>
+
+    <audio id="Wet-Fart" src="Sounds/Wet-Fart.mp3" preload="auto"></audio>
+    <button class="Button Wet-Fart-Button" onclick="document.getElementById('Wet-Fart').play();">Wet Fart</button>
+
+    <audio id="Beans-Fart" src="Sounds/I-Ate-Beans.mp3" preload="auto"></audio>
+    <button class="Button Beans-Fart-Button" onclick="document.getElementById('Beans-Fart').play();">I Ate
+      BEANS!</button>
+
+    <audio id="Oh-No-Fart" src="Sounds/Oh-No-Fart.mp3" preload="auto"></audio>
+    <button class="Button Oh-No-Fart-Button" onclick="document.getElementById('Oh-No-Fart').play();">Oh No Fart</button>
+
+    <audio id="Brain-Fart" src="Sounds/Brain-Fart.mp3" preload="auto"></audio>
+    <button class="Button Brain-Fart-Button" onclick="document.getElementById('Brain-Fart').play();">Brain Fart</button>
+
+    <audio id="Android2015" src="Sounds/Android-2015.mp3" preload="auto"></audio>
+    <button class="Button Android-2015-Button" onclick="document.getElementById('Android2015').play();">Android 2015</button>
+
+    <audio id="Android2017" src="Sounds/Android-2017.mp3" preload="auto"></audio>
+    <button class="Button Android-2017-Button" onclick="document.getElementById('Android2017').play();">Android 2017</button>
+
+    <audio id="Android2019" src="Sounds/Android-2019.mp3" preload="auto"></audio>
+    <button class="Button Android-2019-Button" onclick="document.getElementById('Android2019').play();">Android 2019</button>
+
+    <audio id="Android2021" src="Sounds/Android-2021.mp3" preload="auto"></audio>
+    <button class="Button Android-2021-Button" onclick="document.getElementById('Android2021').play();">Android 2021</button>
+
+    <audio id="Android" src="Sounds/Normal-Android.mp3" preload="auto"></audio>
+    <button class="Button Normal-Android-Button" onclick="document.getElementById('Android').play();">Normal Android</button>
+
+    <audio id="Loud-Android" src="Sounds/Android-Loud-AF.mp3" preload="auto"></audio>
+    <button class="Button Loud-Android-Button" onclick="document.getElementById('Loud-Android').play();">Loud AF Android</button>
+
+  </div>
+
+  <div>
+    <input id="Stop-Button" class="Button" type="button" value="Pause" />
+    <script>
+      document.getElementById('Stop-Button').addEventListener('click', () => {
+        document.querySelectorAll('audio').forEach(el => el.pause());
+      });
+    </script>
+  </div>
+</body>
+
+</html>
