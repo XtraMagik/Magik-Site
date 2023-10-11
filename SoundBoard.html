@@ -87,6 +87,26 @@
       background-color: red;
     }
 
+    .Coconut-Malled-Button {
+      background-color: #faf9ed;
+    }
+
+    .Helicopter-Button {
+      background-color: yellowgreen;
+    }
+
+    .Helicopter-Short-Button {
+      background-color: yellow;
+    }
+
+    .Table-Broken-Button {
+      background-color: fuchsia;
+    }
+
+    .Table-Broken-Short-Button {
+      background-color: purple;
+    }
+
     .Button {
       border-radius: 100px;
       margin-left: 10px;
@@ -113,11 +133,37 @@
       opacity: 0.75;
       transition: 0.1s;
     }
+
+    .Button-2 {
+      border-radius: 100px;
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #2b2a2a;
+      color: black;
+      font-family: monospace;
+      font-size: 15px;
+      font-weight: bolder;
+      float: left;
+      transition: 0.3s;
+    }
+
+    .Button-2:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 0.1s;
+    }
+
+    .Button-2:active {
+      transform: scale(0.9);
+      opacity: 0.75;
+      transition: 0.1s;
+    }
   </style>
 </head>
 
 <body>
-  <!--So, I can't put this in the Main Root folder for the Magik_X Games site because the sound files and image files get mixed up and all sorts of wierd stuff starts happening, so this is in the main Root folder right now until we can find a better way to keep this in a seperate folder.-->
   <div>
     <audio id="Echo" src="Sounds/Echo-Fart.mp3" preload="auto"></audio>
     <button class="Button Echo-Fart-Button" onclick="document.getElementById('Echo').play();">Echo Fart</button>
@@ -171,6 +217,21 @@
 
     <audio id="Loud-Android" src="Sounds/Android-Loud-AF.mp3" preload="auto"></audio>
     <button class="Button Loud-Android-Button" onclick="document.getElementById('Loud-Android').play();">Loud AF Android</button>
+
+    <audio id="Coconut-Malled" src="Sounds/Coconut-Malled.mp3" preload="auto"></audio>
+    <button class="Button-2 Coconut-Malled-Button" onclick="document.getElementById('Coconut-Malled').play();">Coconut Malled</button>
+
+    <audio id="Helicopter-Long" src="Sounds/Helicopter-Long.mp3" preload="auto"></audio>
+    <button class="Button-2 Helicopter-Button" onclick="document.getElementById('Helicopter-Long').play();">Helicopter Helicopter Long</button>
+
+    <audio id="Helicopter-Short" src="Sounds/Helicopter-Short.mp3" preload="auto"></audio>
+    <button class="Button-2 Helicopter-Short-Button" onclick="document.getElementById('Helicopter-Short').play();">Helicopter Helicopter Short</button>
+
+    <audio id="Table-Broken-Long" src="Sounds/Table-Broken-Long.mp3" preload="auto"></audio>
+    <button class="Button-2 Table-Broken-Button" onclick="document.getElementById('Table-Broken-Long').play();">Table Broken Long</button>
+
+    <audio id="Table-Broken-Short" src="Sounds/Table-Broken-Short.mp3" preload="auto"></audio>
+    <button class="Button Table-Broken-Short-Button" onclick="document.getElementById('Table-Broken-Short').play();">Table Broken Short</button>
 
   </div>
 
