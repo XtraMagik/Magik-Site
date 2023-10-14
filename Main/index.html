@@ -1,12 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Particles Background</title>
-  <link rel="stylesheet" type="text/css" href="CSS/Style.css"
+  <title>Magik_X Games | Home</title>
+  <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+  <meta-charset="UTF-8">
+    <style>
+      body {
+      background-color: black;
+      border: 0;
+      margin: 0;
+    }
+
+    .Navigation {
+      display: inline-block;
+      position: relative;
+      color: fuchsia;
+      text-decoration: none;
+      font-family: monospace;
+      font-weight: bolder;
+      transition: 0.75s;
+      text-shadow: 0 0 10px fuchsia;
+      font-size: 30px;
+    }
+
+    .Navigation:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: cyan;
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+    }
+
+    .Navigation:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    .Navigation:hover {
+      transition: 0.75s;
+      text-shadow: 0 0 20px fuchsia;
+    }
+
+    span[data-href] {
+      cursor: pointer;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    #Clock {
+      color: fuchsia;
+      font-weight: bolder;
+      font-family: monospace;
+      font-size: 30px;
+      text-align: center;
+      float: right;
+      transition: 0.75s;
+      text-shadow: 0 0 10px fuchsia;
+      margin-right: 10px;
+    }
+
+    #Clock:hover {
+      cursor: default;
+      text-shadow: 0 0 20px fuchsia;
+      transition: 0.75s;
+    }
+
+    .Logo {
+      width: 75px;
+      height: 75px;
+      float: left;
+      border-radius: 100px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+
+    .Title {
+      color: fuchsia;
+      font-family: monospace;
+      font-weight: bolder;
+      font-size: 100px;
+      text-shadow: 0 0 10px fuchsia;
+      transition: 0.75s;
+    }
+
+    .Title:hover {
+      cursor: default;
+      text-shadow: 0 0 20px fuchsia;
+      transition: 0.75s;
+    }
+
+    .Side-Margin {
+      margin-left: 60px;
+    }
+    </style>
 </head>
 <body>
 
-  <canvas class="background"></canvas>
+  <canvas class="background">
+    <center>
+    <div id="Header">
+      <img src="Images/Magik-Planet.png" class="Logo" title="Magik_X Games Logo">
+      <span title="Go To Main Page" data-href="index.html" class="Side-Margin Navigation">Home</span>
+      <span title="Go To Projects" data-href="projects.html" class="Navigation">Projects</span>
+      <span title="Go To Themes" data-href="themes.html" class="Navigation">Themes</span>
+      <span title="Go To Settings" data-href="settings.html" class="Navigation">Settings</span>
+      <span title="Go To Magik-Musik" data-href="m-musik.html" class="Navigation">Magik-Musik</span>
+      <span title="Go To More" data-href="more.html" class="Navigation">More</span>
+      <div title="Clock" id="Clock">Loading...</div>
+      <script src="Javascript/Clock.js"></script>
+      <script>
+        var aTags = document.querySelectorAll('span[data-href]');
+
+        for (var i = 0; i < aTags.length; i++) {
+          var aTag = aTags[i];
+          aTag.addEventListener('click', function (e) {
+            var ele = e.target;
+            window.location.replace(ele.getAttribute('data-href'));
+          });
+        }
+      </script>
+    </div>
+  </center>
+  <br><br><br><br><br>
+  <center><h1 title="Magik_X Games Title" class="Title">MAGIK_X GAMES</h1></center>
+  </canvas>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
   <script type="text/javascript" src="Javascript/Script.js"></script>
