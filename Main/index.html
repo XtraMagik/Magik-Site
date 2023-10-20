@@ -81,23 +81,80 @@
       margin-top: 5px;
     }
 
+    #Subtitle {
+      color: fuchsia;
+      font-size: 20px;
+      font-family: monospace;
+      text-shadow: 0 0 5px fuchsia;
+      text-align: center;
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 10px;
+      width: 700px;
+      transition: 1s;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    #Subtitle:hover {
+      border: 1px solid cyan;
+      transition: 1s;
+      text-shadow: 0 0 10px fuchsia;
+      box-shadow: 0 0 10px cyan;
+    }
+
+    .Side-Margin {
+      margin-left: 20px;
+    }
+
+    :root {
+      --borderColor: cyan;
+    }
+
     .Title {
+      position: relative;
+      width: 750px;
+      height: 125px;
+      margin: auto;
       color: fuchsia;
       font-family: monospace;
       font-weight: bolder;
       font-size: 100px;
       text-shadow: 0 0 10px fuchsia;
       transition: 0.75s;
-    }
+      width: 750px;
+      text-align: center;
 
-    .Title:hover {
-      cursor: default;
-      text-shadow: 0 0 20px fuchsia;
-      transition: 0.75s;
-    }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        transition: 1s ease-in-out;
+      }
 
-    .Side-Margin {
-      margin-left: 60px;
+      &::before {
+        top: -5px;
+        left: -5px;
+        border-top: 1px solid var(--borderColor);
+        border-left: 1px solid var(--borderColor);
+      }
+
+      &::after {
+        right: -5px;
+        bottom: -5px;
+        border-bottom: 1px solid var(--borderColor);
+        border-right: 1px solid var(--borderColor);
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: calc(100% + 9px);
+        height: calc(100% + 9px);
+        border-radius: 25px;
+        box-shadow: 0 0 2.5px cyan;
+      }
     }
   </style>
 </head>
@@ -105,14 +162,15 @@
 <body>
   <center>
     <div id="Header">
+      <audio id="Click" src="Sounds/Click-Sound.mp3" preload="auto"></audio>
       <img src="Images/Magik-Planet.png" class="Logo" title="Magik_X Games Logo">
-      <span title="Go To Main Page" data-href="index.html" class="Side-Margin Navigation">Home</span>
-      <span title="Go To Projects" data-href="projects.html" class="Navigation">Projects</span>
-      <span title="Go To Themes" data-href="themes.html" class="Navigation">Themes</span>
-      <span title="Go To Settings" data-href="settings.html" class="Navigation">Settings</span>
-      <span title="Go To Magik-Musik" data-href="m-musik.html" class="Navigation">Magik-Musik</span>
-      <span title="Go To More" data-href="more.html" class="Navigation">More</span>
-      <div title="Clock" id="Clock">Loading...</div>
+      <span onclick="document.getElementById('Click').play();" title="Go To Main Page" data-href="index.html" class="Side-Margin Navigation">Home</span>
+      <span onclick="document.getElementById('Click').play();" title="Go To Projects" data-href="projects.html" class="Navigation">Projects</span>
+      <span onclick="document.getElementById('Click').play();" title="Go To Themes" data-href="themes.html" class="Navigation">Themes</span>
+      <span onclick="document.getElementById('Click').play();" title="Go To Settings" data-href="settings.html" class="Navigation">Settings</span>
+      <span onclick="document.getElementById('Click').play();" title="Go To Magik-Musik" data-href="m-musik.html" class="Navigation">Magik-Musik</span>
+      <span onclick="document.getElementById('Click').play();" title="Go To More" data-href="more.html" class="Navigation">More</span>
+      <div title="Clock" id="Clock">Loading Time...</div>
       <script src="Javascript/Clock.js"></script>
       <script>
         var aTags = document.querySelectorAll('span[data-href]');
@@ -127,9 +185,36 @@
       </script>
     </div>
   </center>
-  <br><br><br><br><br>
-  <center><h1 title="Magik_X Games Title" class="Title">MAGIK_X GAMES</h1></center>
+  <br><br><br><br><br><br><br><br><br><br>
+  <center>
+    <h1 title="Magik_X Games Title" class="hoverable-text Title">MAGIK_X GAMES</h1>
+    <audio id="hover-sound" src="Sounds/Title-Hover.mp3"></audio>
+    <audio id="hover-all" src="Sounds/Hover-All.mp3"></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var hoverSound = document.getElementById("hover-sound");
+        var hoverText = $(".hoverable-text");
 
+        hoverText.mouseenter(function() {
+          hoverSound.play();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        var hoverSound = document.getElementById("hover-all");
+        var hoverText = $(".hover-buttons");
+
+        hoverText.mouseenter(function() {
+          hoverSound.play();
+        });
+      });
+    </script>
+  </center>
+  <br>
+  <center><span class="hover-buttons" id="Subtitle">Loading Subtitle...</span></center>
+  <script src="Javascript/Subtitles.js"></script>
 </body>
 
 </html>
